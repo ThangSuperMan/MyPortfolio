@@ -53,7 +53,7 @@
   width: 100%;
 }
 
-.About-work-title {
+.title-block {
   font-weight: 500;
   font-size: 20px;
   position: relative;
@@ -61,7 +61,7 @@
   margin-bottom: 12px;
 }
 
-.About-work-title:before {
+.title-block:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -72,7 +72,7 @@
 }
 
 .About-work-content {
-  font-weight: 290;
+  font-weight: 300;
   overflow-wrap: break-word;
   line-height: 1.6;
   font-size: 14.5px;
@@ -84,11 +84,63 @@
   color: #3d7aed;
 }
 
+/* Bio */
+.About-bio {
+  margin-bottom: 20px;
+}
+.bio-content-list li {
+  list-style: none;
+}
+
+.bio-content-list li span:first-child {
+  font-size: 16px;
+  font-weight: 450;
+  margin-right: 15px;
+}
+
+.bio-content-list li span:last-child {
+  font-weight: 300;
+  font-size: 14.5px;
+  letter-spacing: 0.5px;
+}
+
+.bio-content-list li {
+  display: flex;
+  align-items: center;
+  /*
+    15px * 1 = 15
+    15 / 2 = 7.5px
+   */
+}
+
+.bio-content-list li span:first-child {
+  width: calc(10% - 7.5px);
+}
+
+.bio-content-list li span:last-child {
+  width: calc(90% - 7.5px);
+}
+
+.About-ilove .title-block span {
+  font-size: 15px;
+}
+
+.About-ilove-content {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 14.5px;
+  text-indent: 15px;
+  letter-spacing: 0.5px;
+}
+
 /* Media quereis */
 @media screen and (max-width: 768px) {
+  .About {
+    width: 94%;
+  }
   .About-me {
     display: block;
-    max-width: 523px;
   }
 
   .About-me-right h2 {

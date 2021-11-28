@@ -20,7 +20,10 @@ const CraftDog = () => {
     if (container && renderer) {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
+      console.log(`width: ${scW}`);
+      console.log(`height: ${scH}`);
 
+      renderer.setSize(scW, scH);
       renderer.render(scene, camera);
     }
   }

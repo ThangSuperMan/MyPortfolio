@@ -19,7 +19,7 @@ const About = () => {
         </div>
       </div>
       <div className="About-work">
-        <h4 className="About-work-title">Work</h4>
+        <h4 className="About-work-title title-block">Work</h4>
         <div className="About-work-content">
           Thang is a student and he want to become a full-stack developer based
           in Vietnam with passion for building digital services/stuff he wants.
@@ -32,6 +32,31 @@ const About = () => {
         <button type="button" className="primary-button">
           My portfolio <MdKeyboardArrowRight className="icon" />
         </button>
+      </div>
+      <div className="About-bio">
+        <h4 className="title-block">Bio</h4>
+        <div className="About-bio-content">
+          <ul className="bio-content-list">
+            <li>
+              <span>2002</span>
+              <span>Born in Quang Ngai, Vietnam.</span>
+            </li>
+            <li>
+              <span>2021</span>
+              <span className="bio-especial">Studying at university.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="About-ilove">
+        <div className="title-block">
+          I <span>♥</span>
+        </div>
+        <div className="About-ilove-content">
+          Art, Music, k-drama,
+          <span className="hightlight"> Anime, </span>
+          Peaceful places, Park.
+        </div>
       </div>
     </div>
   );
