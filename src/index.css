@@ -16,7 +16,7 @@ body {
   margin: 20px auto;
   border: none;
   line-height: 19.2px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 450;
   padding: 10px 16px;
   color: #fff;
@@ -28,7 +28,9 @@ body {
 }
 
 .primary-button .icon {
+  font-size: 15px;
   margin-left: 5px;
+  color: #fff;
 }
 
 /* Variables */

@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Posts from "./components/Posts";
 import Works from "./components/Works";
+import Footer from "./components/Footer";
 import CraftDog from "./components/CraftDog";
 import ErrorPage from "./components/ErrorPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/posts" element={<Posts />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

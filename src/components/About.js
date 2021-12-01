@@ -1,5 +1,6 @@
 import react from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { FaGithub, FaFacebook } from "react-icons/fa";
 import "./About.css";
 import imageAvatar from "../public/images/avatar.jpeg";
 
@@ -58,6 +59,28 @@ const About = () => {
           Peaceful places, Park.
         </div>
       </div>
+      <div className="About-ontheweb">
+        <div className="title-block">On the web</div>
+        <span className="ontheweb-item">
+          <FaGithub className="icon" />
+          <span>
+            <a href="https://github.com/ThangSuperMan">ThangSuperMan</a>
+          </span>
+        </span>
+        <span className="ontheweb-item">
+          <FaFacebook className="icon" />
+          <span>
+            <a href="https://www.facebook.com/profile.php?id=100025635353631">
+              Tann Thangg
+            </a>
+          </span>
+        </span>
+      </div>
+
+      <button href="#" className="primary-button">
+        Popular post
+        <MdKeyboardArrowRight className="icon" />
+      </button>
     </div>
   );
 };

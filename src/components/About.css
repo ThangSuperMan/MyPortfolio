@@ -121,6 +121,10 @@
   width: calc(90% - 7.5px);
 }
 
+.About-ilove {
+  margin-bottom: 20px;
+}
+
 .About-ilove .title-block span {
   font-size: 15px;
 }
@@ -132,6 +136,33 @@
   font-size: 14.5px;
   text-indent: 15px;
   letter-spacing: 0.5px;
+}
+
+.ontheweb-item {
+  display: flex;
+  width: 33%;
+  align-items: center;
+  padding: 5px 16px;
+}
+
+.ontheweb-item:hover {
+  border-radius: 8px;
+  background-color: #f0fff4;
+}
+
+.ontheweb-item a {
+  text-decoration: none;
+}
+
+.ontheweb-item .icon {
+  margin-right: 7px;
+}
+
+.ontheweb-item a,
+.icon {
+  font-size: 15px;
+  font-weight: 400;
+  color: #2c7a7b;
 }
 
 /* Media quereis */
@@ -152,5 +183,9 @@
 
   .About-me-left {
     text-align: center;
+  }
+
+  .ontheweb-item {
+    width: 43%;
   }
 }

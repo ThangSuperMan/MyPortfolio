@@ -33,7 +33,7 @@ const Header = () => {
               <a href="#">Posts</a>
             </li>
             <li className="menu-item">
-              <FaGithub className="icon" />
+              <FaGithub className="icon" style={{ color: "#1a202c" }} />
               <a href="#">Source</a>
             </li>
           </ul>
