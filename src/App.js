@@ -6,7 +6,12 @@ import Works from "./components/Works";
 import Footer from "./components/Footer";
 import CraftDog from "./components/CraftDog";
 import ErrorPage from "./components/ErrorPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  NavLink as Link,
+} from "react-router-dom";
 
 function App() {
   return (

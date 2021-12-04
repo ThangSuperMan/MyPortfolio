@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+/* Variables */
+:root {
+  --primary-color: #f0e7db;
+  --text-color: #1a202c;
+  --high-light: #3d7aed;
+  --dark-mode-normal: #805ad5;
+  --dark-mode-active: #fbd38d;
+  --border: #e2e8f0;
+}
+
+/*
+ All props for support dark mode
+ */
+.primary-button.dark {
+  color: var(--text-color);
+  background-color: #81e6d9;
+}
+
 body {
   background-color: var(--primary-color);
   font-family: "Poppins", sans-serif;
@@ -12,12 +30,18 @@ body {
   height: 100%;
 }
 
+body.active {
+  background-color: rgb(32, 32, 35);
+  color: #fff;
+}
+
 .primary-button {
+  cursor: pointer;
   margin: 20px auto;
   border: none;
   line-height: 19.2px;
-  font-size: 17px;
-  font-weight: 450;
+  font-size: 16px;
+  font-weight: 400;
   padding: 10px 16px;
   color: #fff;
   background-color: #319795;
@@ -31,14 +55,4 @@ body {
   font-size: 15px;
   margin-left: 5px;
   color: #fff;
-}
-
-/* Variables */
-:root {
-  --primary-color: #f0e7db;
-  --text-color: #1a202c;
-  --high-light: #3d7aed;
-  --dark-mode-normal: #805ad5;
-  --dark-mode-active: #fbd38d;
-  --border: #e2e8f0;
 }

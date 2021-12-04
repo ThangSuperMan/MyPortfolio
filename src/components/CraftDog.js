@@ -15,13 +15,10 @@ const CraftDog = () => {
 
   // Functions
   function handleWindowResize() {
-    console.log("window resize");
     const { current: container } = containerRef;
     if (container && renderer) {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
-      console.log(`width: ${scW}`);
-      console.log(`height: ${scH}`);
 
       renderer.setSize(scW, scH);
       renderer.render(scene, camera);
@@ -42,11 +39,11 @@ const CraftDog = () => {
       const far = 5000;
 
       const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-      camera.position.set(0, 0, 5);
+      camera.position.set(0, 2, 5);
       setCamera(camera);
 
       // Ambient light
-      const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+      const ambientLight = new THREE.AmbientLight(0xcccccc, 3);
       scene.add(ambientLight);
 
       // Renderer

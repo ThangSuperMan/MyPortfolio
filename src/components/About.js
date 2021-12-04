@@ -1,16 +1,59 @@
-import react from "react";
+import { useRef, useState, useEffect } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaGithub, FaFacebook } from "react-icons/fa";
 import "./About.css";
 import imageAvatar from "../public/images/avatar.jpeg";
+import { gsap, TimelineMax } from "gsap";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
+  const aboutSayHiRef = useRef();
+  const aboutWorkRef = useRef();
+  const aboutBioRef = useRef();
+  const aboutILoveRef = useRef();
+  const aboutOnTheWebRef = useRef();
+  const aboutMeRef = useRef();
+  const [tl] = useState(new TimelineMax());
+
+  // Functions
+  const goToPageWorks = (event) => {
+    window.location.href = "http://localhost:3000/works";
+  };
+
+  const goToPagePosts = (event) => {
+    window.location.href = "http://localhost:3000/posts";
+  };
+
+  // Wait until DOM has been rendered
+  useEffect(() => {
+    tl.from([aboutSayHiRef.current, aboutMeRef.current], {
+      y: "20px",
+      duration: 0.75,
+      alpha: 0,
+      ease: "Power2.easeInOut",
+    });
+
+    tl.from(
+      [
+        aboutWorkRef.current,
+        aboutBioRef.current,
+        aboutILoveRef.current,
+        aboutOnTheWebRef.current,
+      ],
+      {
+        y: "20px",
+        duration: 0.75,
+        alpha: 0,
+        ease: "Power2.easeInOut",
+      }
+    );
+  }, []);
   return (
     <div className="About">
-      <div className="About-sayhi">
+      <div className="About-sayhi" ref={aboutSayHiRef}>
         Hello, I'm a full-stack developer based in Vietnam!
       </div>
-      <div className="About-me">
+      <div className="About-me" ref={aboutMeRef}>
         <div className="About-me-right">
           <h2>Phan Tan Thang</h2>
           <p>Digital Craftsman ( Creative / Developer / Designer )</p>
@@ -19,7 +62,7 @@ const About = () => {
           <img src={imageAvatar} />
         </div>
       </div>
-      <div className="About-work">
+      <div className="About-work" ref={aboutWorkRef}>
         <h4 className="About-work-title title-block">Work</h4>
         <div className="About-work-content">
           Thang is a student and he want to become a full-stack developer based
@@ -30,11 +73,15 @@ const About = () => {
           working on the product call
           <span className="hightlight"> portfolio.</span>
         </div>
-        <button type="button" className="primary-button">
+        <button
+          onClick={goToPageWorks}
+          type="button"
+          className="primary-button"
+        >
           My portfolio <MdKeyboardArrowRight className="icon" />
         </button>
       </div>
-      <div className="About-bio">
+      <div className="About-bio" ref={aboutBioRef}>
         <h4 className="title-block">Bio</h4>
         <div className="About-bio-content">
           <ul className="bio-content-list">
@@ -49,7 +96,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-      <div className="About-ilove">
+      <div className="About-ilove" ref={aboutILoveRef}>
         <div className="title-block">
           I <span>♥</span>
         </div>
@@ -59,7 +106,7 @@ const About = () => {
           Peaceful places, Park.
         </div>
       </div>
-      <div className="About-ontheweb">
+      <div className="About-ontheweb" ref={aboutOnTheWebRef}>
         <div className="title-block">On the web</div>
         <span className="ontheweb-item">
           <FaGithub className="icon" />
@@ -77,7 +124,7 @@ const About = () => {
         </span>
       </div>
 
-      <button href="#" className="primary-button">
+      <button onClick={goToPagePosts} type="button" className="primary-button">
         Popular post
         <MdKeyboardArrowRight className="icon" />
       </button>
