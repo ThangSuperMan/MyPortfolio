@@ -12,7 +12,6 @@ const Header = () => {
   const buttonDarkModeRef = useRef();
   const [toggleDarkMode, setToggleDarkMode] = useState(false);
   const [imageLogo, setImageLogo] = useState(logoImageBlack);
-  console.log(imageLogo);
 
   // Functions
   const changeTheColorTheme = (flag) => {
@@ -20,24 +19,35 @@ const Header = () => {
     const imageLogoFoot = document.querySelector(".logo img");
     const textsHightLight = document.querySelectorAll(".hightlight");
     const aboutSayHi = document.querySelector(".About-sayhi");
+    const titlesBlock = document.querySelectorAll(".title-block");
+    const buttonsPrimary = document.querySelectorAll(".primary-button");
+    console.log(buttonsPrimary);
 
     if (!flag) {
       // Turn on the dark mode
       document.body.classList.add("dark");
 
       textsHightLight.forEach((item) => item.classList.add("dark"));
+      titlesBlock.forEach((title) => title.classList.add("dark"));
       headerRef.current.classList.add("dark");
-      setImageLogo(logoImageWhite);
+      buttonsPrimary.forEach((button) => button.classList.add("dark"));
+      onTheWebItems.forEach((item) => item.classList.add("dark"));
       aboutSayHi.classList.add("dark");
+      setImageLogo(logoImageWhite);
     } else {
       // Turn off the dark mode
       document.body.classList.remove("dark");
+
       textsHightLight.forEach((item) => item.classList.remove("dark"));
+      titlesBlock.forEach((title) => title.classList.remove("dark"));
+      buttonsPrimary.forEach((button) => button.classList.remove("dark"));
+      onTheWebItems.forEach((item) => item.classList.remove("dark"));
       headerRef.current.classList.remove("dark");
       setImageLogo(logoImageBlack);
       aboutSayHi.classList.remove("dark");
     }
   };
+
   const handleDarkMode = () => {
     console.log("Handle toggle mode");
     if (!toggleDarkMode) {

@@ -48,6 +48,7 @@ const About = () => {
       }
     );
   }, []);
+
   return (
     <div className="About">
       <div className="About-sayhi" ref={aboutSayHiRef}>
@@ -108,20 +109,18 @@ const About = () => {
       </div>
       <div className="About-ontheweb" ref={aboutOnTheWebRef}>
         <div className="title-block">On the web</div>
-        <span className="ontheweb-item">
-          <FaGithub className="icon" />
-          <span>
-            <a href="https://github.com/ThangSuperMan">ThangSuperMan</a>
-          </span>
-        </span>
-        <span className="ontheweb-item">
-          <FaFacebook className="icon" />
-          <span>
+        <div className="ontheweb-wrapper">
+          <button type="button" className="ontheweb-item">
+            <FaGithub className="icon ontheweb-icon" />
+            <a href="https://github.com/ThangSuperMan">@ThangSuperMan</a>
+          </button>
+          <button type="button" className="ontheweb-item">
+            <FaFacebook className="icon ontheweb-icon" />
             <a href="https://www.facebook.com/profile.php?id=100025635353631">
-              Tann Thangg
+              @Tann Thangg
             </a>
-          </span>
-        </span>
+          </button>
+        </div>
       </div>
 
       <button onClick={goToPagePosts} type="button" className="primary-button">
